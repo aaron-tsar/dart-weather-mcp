@@ -60,7 +60,7 @@ Arguments: run
 Environment Variables:
   Key: OPENWEATHER_API_KEY
   Value: your_api_key_here
-Timeout: 600 (tùy chọn)
+Timeout: 600
 ```
 
 **Phiên bản Executable (nhanh hơn):**
@@ -71,7 +71,7 @@ Arguments: (để trống)
 Environment Variables:
   Key: OPENWEATHER_API_KEY
   Value: your_api_key_here
-Timeout: 600 (tùy chọn)
+Timeout: 600
 ```
 
 #### Bước 3: Test kết nối
