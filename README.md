@@ -53,18 +53,21 @@ Nhiều MCP clients hiện tại hỗ trợ thêm MCP server qua giao diện "Ad
 
 **Phiên bản Dart JIT (khuyến nghị cho development):**
 ```
+Type: Command (stdio)
 Name/Identifier: Weather MCP
 Command: dart
-Arguments: run
-             /Users/vuongha/cursor/dart-weather-mcp/bin/weather_mcp_server.dart
+Arguments: run /Users/vuongha/cursor/dart-weather-mcp/bin/weather_mcp_server.dart
 Environment Variables:
   Key: OPENWEATHER_API_KEY
   Value: your_api_key_here
 Timeout: 600
 ```
 
+*💡 Lưu ý: Thay đường dẫn `/Users/vuongha/cursor/dart-weather-mcp/` trong Arguments bằng đường dẫn thực tế đến repo của bạn*
+
 **Phiên bản Executable (nhanh hơn):**
 ```
+Type: Command (stdio)
 Name/Identifier: Weather MCP  
 Command: /Users/vuongha/cursor/dart-weather-mcp/weather_mcp_server
 Arguments: (để trống)
@@ -73,6 +76,8 @@ Environment Variables:
   Value: your_api_key_here
 Timeout: 600
 ```
+
+*💡 Lưu ý: Thay đường dẫn `/Users/vuongha/cursor/dart-weather-mcp/` trong Command bằng đường dẫn thực tế đến repo của bạn*
 
 #### Bước 3: Test kết nối
 Sau khi add, server sẽ cung cấp tool `getWeather` với schema:
@@ -85,21 +90,7 @@ Sau khi add, server sẽ cung cấp tool `getWeather` với schema:
 - ✅ **Continue.dev** (VS Code Extension)
 - ✅ **Zed Editor**
 - ✅ **Codeium Chat** (một số phiên bản)
-- ❓ **GitHub Copilot Chat** (experimental - nếu có hỗ trợ MCP)
 - ✅ Các clients khác implement MCP protocol
-
-#### 📝 Ví dụ cấu hình cho GitHub Copilot (nếu hỗ trợ):
-Nếu GitHub Copilot Chat có tính năng add MCP server:
-```
-Type: Command (stdio)
-Server Name: Weather MCP
-Command Path: /usr/local/bin/dart  
-Arguments: run /Users/vuongha/cursor/dart-weather-mcp/bin/weather_mcp_server.dart
-Environment:
-  OPENWEATHER_API_KEY=<INPUT_YOUR_API_KEY_HERE>
-```
-
-*Lưu ý: GitHub Copilot hiện tại chưa hỗ trợ MCP protocol chính thức. Sử dụng CLI tool để tích hợp với VS Code.*
 
 #### 🔧 Troubleshooting:
 
