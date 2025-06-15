@@ -1,0 +1,34 @@
+# Files and directories created by pub
+.dart_tool/
+.packages
+build/
+pubspec.lock
+
+# Conventional directory for build outputs
+build/
+
+# Omit committing pubspec.lock for library packages
+# Note: pubspec.lock should be committed for application packages
+
+# Environment variables
+.env
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Compiled executables
+weather_mcp_server
+weather_mcp_server.exe 

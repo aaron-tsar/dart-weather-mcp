@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Weather CLI Tool - Shell Script Wrapper
+# Usage: ./weather "Hanoi" [options]
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DART_CLI="$SCRIPT_DIR/bin/weather_cli.dart"
+
+# Check if Dart is installed
+if ! command -v dart &> /dev/null; then
+    echo "❌ Dart is not installed. Please install Dart SDK."
+    echo "   Visit: https://dart.dev/get-dart"
+    exit 1
+fi
+
+# Check if CLI exists
+if [ ! -f "$DART_CLI" ]; then
+    echo "❌ Weather CLI not found at: $DART_CLI"
+    exit 1
+fi
+
+# If no arguments, show help
+if [ $# -eq 0 ]; then
+    dart run "$DART_CLI" --help
+    exit 0
+fi
+
+# If first argument doesn't start with -, treat it as city name
+if [[ $1 != -* ]]; then
+    CITY="$1"
+    shift
+    dart run "$DART_CLI" --city "$CITY" "$@"
+else
+    # Pass all arguments directly
+    dart run "$DART_CLI" "$@"
+fi 
